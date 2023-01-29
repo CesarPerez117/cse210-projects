@@ -9,7 +9,8 @@ class Program
         // Display the welcome prompt
         Console.WriteLine("Welcome to the Journal Program!");
 
-        
+        JournalPrompts journalPrompts = new JournalPrompts();
+        StorageJournal storageJournal = new StorageJournal();
 
         do
         {
@@ -21,9 +22,6 @@ class Program
             "\n5. Quit");
             Console.Write("What would you like to do? ");
             choice = int.Parse(Console.ReadLine());
-
-            JournalPrompts journalPrompts = new JournalPrompts();
-            StorageJournal storageJournal = new StorageJournal();
             
 
             switch (choice)
@@ -51,19 +49,21 @@ class Program
                     break;
                 case 2:
                     // I need to get the information saved in the variable
-                    // or in the file to display the current info.
+                    // or in the file to display the current journal.
                     storageJournal.Display();
                     //Console.WriteLine("You choose Display");
 
                     break;
                 case 3:
                     // I need to find and get back the file with the journal record
-                    Console.WriteLine("You choose Load");
+                    storageJournal.LoadFile();
+                    //Console.WriteLine("You choose Load");
                     break;
                 case 4:
                     // I need to save the answers with the prompt and date
                     // and create a new file or storage in an existant one
-                    Console.WriteLine("You choose Save");
+                    storageJournal.CreateFile();
+                    //Console.WriteLine("You choose Save");
                     break;
                 default:
                     // This will be to solve any problem if user place a different value.

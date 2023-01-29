@@ -28,7 +28,7 @@ public class JournalPrompts
         // we learned this last team meeting...
         // 2. Select a random prompt
         Random random = new Random();
-        int value = random.Next(6);
+        int value = random.Next(_listOfPrompts.Count);
         // 3. DIsplay the random prompt
         string journalPrompt = _listOfPrompts[value];
         return journalPrompt;
