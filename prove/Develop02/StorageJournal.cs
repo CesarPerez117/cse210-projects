@@ -32,7 +32,7 @@ public class StorageJournal
     public void LoadFile()
     {
         // ask the file name
-        Console.WriteLine("What is the file name? ");
+        Console.Write("What is the file name? ");
         string _userAnswer = Console.ReadLine();
         // Now use if to check if the file exists, if not, tell to user. 
         if (File.Exists(_userAnswer))
@@ -62,7 +62,7 @@ public class StorageJournal
             foreach (JournalEntry journalEntry in _storageJournal)
             {
                 outputFile.WriteLine($"Date: {journalEntry._dateTime} - Prompt: {journalEntry._journalPrompt}");
-                outputFile.WriteLine($"> {journalEntry._journalAnswer}");
+                outputFile.WriteLine($"> {journalEntry._journalAnswer}\n");
             }
         }
     }
@@ -75,7 +75,7 @@ public class StorageJournal
             foreach (JournalEntry journalEntry in _storageJournal)
                 {
                     outputFile.WriteLine($"Date: {journalEntry._dateTime} - Prompt: {journalEntry._journalPrompt}");
-                    outputFile.WriteLine($"> {journalEntry._journalAnswer}");
+                    outputFile.WriteLine($"> {journalEntry._journalAnswer}\n");
                 }
         }
     }
