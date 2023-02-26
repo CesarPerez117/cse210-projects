@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 public class ListingActivity : Activity
 {
-    // Attributes 
+    
     private List<string> _promptList = new List<string>
     {
     "Who are people that you appreciate?",
@@ -12,10 +12,8 @@ public class ListingActivity : Activity
     "When have you felt the Holy Ghost this month?",
     "Who are some of your personal heroes?"
     };
-    private List<string> _userList = new List<string>();
 
-    // Constructors
-    // Methods
+
     public ListingActivity(int timeActivity) : base(timeActivity)
     {
 
