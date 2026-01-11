@@ -12,7 +12,7 @@ class Program
         What is your last name? Burton
 
         Your name is Burton, Scott Burton.
-         */
+        */
 
         Console.Write("What is your first name? ");
         string firstName = Console.ReadLine();
