@@ -1,0 +1,55 @@
+Articulate the principle of abstraction.
+
+1- Explain the meaning of Abstraction: Abstraction means focusing on what something does, not how it does it. 
+So we will be hiding the complicated details of how the things work and we will just show what is important.
+If we consider a car as the object, the car is made of diferent components such as motor, transmission or drivetrain.
+Each of this compents is made of diferent pieces, materials and make a specific function. So with abstraction, we make
+sure that we just show the most simple things, like this is a car, that has components, they work together to make the car 
+functional and drivable, with not showing 6 years of mechanic ingeneering to the user. 
+
+2- Highlight a benefit of Abstraction: If you change how data is stored inside a class, other classes don’t need 
+to be updated because they only interact with the public methods.
+
+3- Provide an application of Abstraction: Every time that we decide to take an instance of an object that hides the internal
+funcionality, This means we can call a method without rewriting all the underlying code each time. For example, in Python we 
+use print() to display text. We don’t need to know how the operating system handles the console output; we just call print() 
+and it works.
+
+4- Use a code example of Abstraction from the program you wrote.
+
+A class Resume needs to have the previuos experience of the individaul.
+This means that we need to enter the Jobs he has been in. If we create a 
+class that just keeps this records to display it in a certain way instead 
+of writing in every time, this will be: 
+public class Job
+{
+    public string _jobTitle;
+    public string _company;
+    public int _startYear;
+    public int _endYear;
+
+    public void Display()
+    {
+        Console.WriteLine($"{_jobTitle} ({_company}) {_startYear}-{_endYear}");
+    }
+}
+
+Then, in the main, we can add the info required, and display it as we want:
+Job job1 = new Job();
+        job1._jobTitle = "Scheduler Agent";
+        job1._company = "Solar City";
+        job1._startYear = 2021;
+        job1._endYear = 2023;
+
+job1.Display(); 
+
+and the output will be: 
+
+Scheduler Agent (Solar City) 2021-2023
+
+
+5- Thoroughly explain these concepts: Well, I may repeat myself I believe but... I can say that abstraction means focusing on 
+what something does, not how it does it. It hides complicated details and shows only what is important. For example, a car has 
+many complex parts like the engine and transmission, but as drivers we only see simple controls. A benefit of abstraction is 
+that if the way data is stored inside a class changes, other classes don’t need to be updated because they only interact with 
+public methods. 
