@@ -1,0 +1,37 @@
+Meaning of Encapsulation
+    Encapsulation is one of the core principles of object-oriented. It means building the data (fields) and methods that operate on that data into a single unit called class, while restricting
+direct access to the internal details. Basically, it will keep your variables that keep the data private and untouchable from outside, making sure not other than the internal functions will 
+make changes and use their collected data.
+
+Benefit of Encapsulation
+    Encapsulation protects the integrity of the data by preventing outside code from making uncontrolled changes. It also makes programs easier to maintain and interact, since the internal
+implementation can change without affecting how other parts of the program interact with the class. 
+
+Application of Encapsulation
+    For example, in a banking system, you don't want anyone directly changing an account balance. Instead, you provide controlled methods like deposit and withdraw that enforce rules such also
+no overdraft or no negative deposits. So the balance would be private, meaning no external code can directly modify it. But the functions deposit and withdraw will act as controlled gateways,
+ensuring only valid operations are performed, making sure the data is updated properly, so then it will change the balance base on the operation requested.
+
+Code example of Encapsulation from the program you wrote.
+public class Fraction
+{
+    private int _top;
+    private int _bottom;
+    // the variables are private, so they cannot be changed for other than the internal functions (methods).
+   
+    public Fraction(int top, int bottom)
+    {  // this is the constructor that will make sure the data is get and set to be used and returned just for internal functions (methods)
+        _top = top;
+        _bottom = bottom;
+    }
+    
+    public string GetFractionString()
+    {  // this will provide the class that is requesting access and interaction to display the information they entered and interacted with.
+        string fractionString = $"{_top}/{_bottom}";
+        return fractionString;
+    }
+
+}
+
+Thoroughly explain these concepts. -> Done.
+
