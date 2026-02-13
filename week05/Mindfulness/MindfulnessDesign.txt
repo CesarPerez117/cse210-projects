@@ -1,0 +1,50 @@
+Desing for Mindfulness Program
+
+Program
+   └── Main()
+
+Activity
+    |── proct int _timeActivity
+    |── proct string _activityName
+    |── proct string _activityDescription
+    └── Methods: ActivityTime(), StartingMessage(), 
+    EndingMessage(), ShowSpinner(), GetReady()
+
+BreathingActivity
+    |── priv string _msgIn
+    |── priv string _msgOut
+    └── Methods: BreathingExercise() as void Run()
+
+ReflectionActivity
+    |── priv List<string> _promptList
+    |── priv List<string> _questionList
+    └── Methods: ShowPrompt(), ShowQuestions(), void Run()
+
+ListingActivity
+    |── priv List<string> _promptList
+    └── Methods: GetRandomPrompt(), 
+    Show the prompt and userList in void Run()
+
+Responsibilities
+
+* Activity
+    - Will get from user the time for the activity
+    - Show the spinner in the reflection activity
+    - The get ready will show a timer and start the activity
+
+* BreathingActivity
+    - The Breathing method will provide a decent time to
+    breath between and will prompt instructions to the user.
+
+* ReflectionActivity
+    - The methods will get a promtp from the list, then provide a 
+    question and time for the user to think about.
+
+* ListingActivity
+    - The method GetUserList will get all the things the user
+    will write down as the timer goes. The prompt provided will
+    be randomly taken from the list of prompts.
+
+Relationships Summary
+- Activity 
+
