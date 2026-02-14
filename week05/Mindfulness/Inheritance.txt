@@ -1,0 +1,68 @@
+
+Meaning of Inheritance
+
+Inheritance is, like the word says, the same as like the case of people inhereting certain characteristics from their parents.
+In this code case, it helps the code to collect the attributes and methods from another class, mostly called parent/base class.
+This helps a lot because it helps to keep a clean and efficient code. Also, it save you from re-using attributes and methods that will be use 
+in other classes, making the most common of them being accessible in the base class, and just concentrate in the necessary for each class.
+
+Benefit of Inheritance
+
+One of the biggest benefits of inheritance is that it keeps the code clean and organized. Instead of writing the same properties and methods 
+over and over in different classes, you can just put them in a base class and let the other classes inherit them. This saves time, avoids duplication, 
+and makes the program easier to maintain when changes are needed.
+
+Application of Inheritance
+Inheritance is useful in many real-world cases. For example, if you are building a system for handling orders, you can have a general 'Order' class with 
+the common details like 'OrderId' and 'CustomerName'. Then you can create a more specific class like 'OnlineOrder' that inherits from 'Order' but adds extra things 
+like 'DeliveryAddress' or sending a confirmation email. This way, the base class holds the shared logic, and the child class focuses only on what makes it 
+different.
+
+
+Example from my code
+
+Every activity has an starting message. So, it was no necessary to make the logic in every class. In the parent/base class, there is three attributes and one methods
+that goes through all the other activities inherit.
+
+public class Activity 
+{
+    protected string _activityName;
+    protected string _activityDescription;
+    protected int _activityTime;
+
+    public Activity()
+    {
+        _activityName = "";
+        _activityDescription = "";
+        _activityTime = 0;
+    }
+
+    public void DisplayStartingMessage()
+    {
+        Console.Clear();
+        Console.WriteLine($"Welcome to the {_activityName}.\n\n{_activityDescription}");
+        Console.Write("\nHow long, in seconds, would you like for your session? ");
+        _activityTime = int.Parse(Console.ReadLine());
+        Console.WriteLine("\nGet Ready...");
+        ShowSpinner(3);
+    }
+}
+
+So this is what we see in the classes: 
+
+public class BreathingActivity : Activity
+{
+    public BreathingActivity() Here is where we determine the values of the attributes that were inherit
+    {
+        _activityName = "Breathing";
+        _activityDescription = "This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.";
+    }
+
+    public void Run()
+    {
+        DisplayStartingMessage(); This is where we execute the method inherit from Activity
+
+        DateTime endTime = DateTime.Now.AddSeconds(_activityTime);
+        
+    }
+}
