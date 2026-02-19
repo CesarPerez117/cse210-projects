@@ -1,0 +1,4 @@
+1200
+SimpleGoal:MTB,Run and MTB ride,50,True
+EternalGoal:Get Married,Get married as soon as possible,1000,1
+ChecklistGoal:Go to temple,Visit the temple and do ordinances,50,500,5,2
