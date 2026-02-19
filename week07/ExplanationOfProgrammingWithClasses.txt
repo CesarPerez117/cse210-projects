@@ -1,0 +1,40 @@
+Explanation of Programming with Classes
+
+1. Abstraction
+
+- Definition: Abstraction means focusing on essential features while hiding unnecessary details. It lets you work with simplified models instead of 
+complex implementations.
+- Example: In myr Goals program, I defined an abstract base class Goal with methods like RecordEvent() and GetDetailsString(). The details of how 
+each goal type works were hidden behind this abstraction.
+- Flexibility benefit: By using abstraction, you could add new goal types later (like ChecklistGoal or EternalGoal) without changing the rest of 
+the system. The program only needed to know that each goal could record events and provide details, not how it did so.
+
+2. Encapsulation
+
+- Definition: Encapsulation is the practice of bundling data and methods together while restricting direct access to internal details. It protects
+ the integrity of the object.
+- Example: In my classes, member variables like _isComplete (from week6, EternalQuest Program) were kept private or protected, and I exposed them
+ through methods or properties. This prevented other parts of the program from accidentally changing the state in unsafe ways.
+- Flexibility benefit: Encapsulation make your program easier to maintain. If you later changed how completion was tracked, you only needed to
+ update the class itself — the rest of the code still interacted through the same public methods.
+
+3. Inheritance
+
+- Definition: Inheritance allows a class to acquire properties and behaviors from another class, promoting reuse and logical hierarchy.
+- Example: I created derived classes like SimpleGoal, ChecklistGoal, and EternalGoal (all from week6, EternalQuest Program) that inherited 
+from the base Goal class. Each reused the shared properties (Name, Points) and methods, while adding or overriding behavior.
+- Flexibility benefit: Inheritance reduced duplication and made it easy to extend the system. If you wanted to add a new type of goal, you could 
+inherit from Goal and only implement the differences, keeping the rest consistent.
+
+4. Polymorphism
+
+- Definition: Polymorphism allows the same method call to behave differently depending on the object type.
+- Example: I used polymorphism when calling RecordEvent() (from week6, EternalQuest Program) on a list of Goal objects. Even though each object 
+was referenced as Goal, the runtime executed the correct version (SimpleGoal, ChecklistGoal, or EternalGoal).
+- Flexibility benefit: Polymorphism make your program extensible. You could add new goal types without rewriting the loop that processed goals — the 
+system automatically called the right method for each type.
+
+. Conclusion:
+
+These principles make your code easier to understand, safer to maintain, and more adaptable to future changes. In the exercise tracking program, these
+principles make it easy to add new activity types, modify calculations and extend functionality without breaking existing code.
